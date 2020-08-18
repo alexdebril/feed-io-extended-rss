@@ -1,0 +1,13 @@
+{
+    "name": "debril/feed-io-extended-rss",
+    "description": "Extended RSS Support for feed-io",
+    "type": "library",
+    "require": {
+        "ext-dom": "*",
+        "debril/feed-io": "^4.7"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.3"
+    },
+    "license": "MIT"
+}
