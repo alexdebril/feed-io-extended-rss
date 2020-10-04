@@ -20,5 +20,4 @@ class ExtendedLoader
             'rdf' => new Rdf($builder),
         ];
     }
-
 }
