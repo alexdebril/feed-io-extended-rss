@@ -3,7 +3,6 @@
 
 namespace FeedIo;
 
-
 use FeedIo\Standard\ExtendedLoader;
 
 class ExtendedFeedIo extends FeedIo
@@ -20,5 +19,4 @@ class ExtendedFeedIo extends FeedIo
 
         return $loader->getCommonStandards($this->getDateTimeBuilder());
     }
-
 }
