@@ -15,8 +15,21 @@ You'll use it exactly like `feed-io` the only difference being the class use to 
 ```php
 <?php
 
-$feed = new \FeedIo\ExtendedFeedIo($client, $logger);
+require './vendor/autoload.php';
+
+$client = new \FeedIo\Adapter\Guzzle\Client(new GuzzleHttp\Client());
+
+$logger = new \Psr\Log\NullLogger();
+
+$feedIo = new \FeedIo\ExtendedFeedIo($client, $logger);
+
+$result = $feedIo->read('http://php.net/feed.atom');
+
+$feed = $result->getFeed();
+
 ```
+
+There's another difference: you can have access to all cool attributes defined in the [Media RSS specifications](https://www.rssboard.org/media-rss#media-description) whereas feed-io only feature the most common ones.  
 
 ## Credits
 
